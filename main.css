@@ -44,3 +44,28 @@
     grid-column: span 4;
     width: 100%;
 }
+
+.more__container {
+    display: flex;     
+    height: 565px;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    width: 90px;
+}
+
+.btn__more {
+    height: 100%;
+    width: 3vw;
+}
+
+#more-operations {
+    position: absolute;
+    left: 64%; 
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(6, 90px);
+    padding: 5px;
+    z-index: 10;
+}
