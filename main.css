@@ -38,6 +38,7 @@
     width: 90px;
     height: 90px;
     cursor: pointer;
+    user-select: none;
 }
 
 .btn__result {
@@ -56,13 +57,13 @@
 
 .btn__more {
     height: 100%;
-    width: 3vw;
+    width: 60px;
 }
 
 #more-operations {
     position: absolute;
-    left: 64%; 
-    display: grid;
+    left: 67%; 
+    display: none;
     gap: 5px;
     grid-template-columns: repeat(3, 90px);
     grid-template-rows: repeat(6, 90px);
