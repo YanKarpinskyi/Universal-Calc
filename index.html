@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="container">
+        <!-- <div class="container">
             <div class="main__calc">
                 <input type="text" name="result" id="result">
 
@@ -34,11 +34,11 @@
 
                 <button class="btn btn__result">=</button>
             </div>
-        </div>
+        </div> -->
         <div class="more__container">
-            <button class="btn btn__more">More</button>
+            <!-- <button class="btn btn__more">More</button> -->
             <div id="more-operations">
-                <!-- <button class="btn btn__oper" id="btn__perc">%</button> -->
+                <button class="btn btn__oper" id="btn__perc">%</button>
                 <button class="btn btn__oper" id="btn__sqrt">√</button>
                 <button class="btn btn__oper" id="btn__cbrt">∛</button>
                 <button class="btn btn__oper" id="btn__power">^</button>
@@ -59,7 +59,67 @@
                 <button class="btn btn__oper" id="btn__atan">atan</button>
             </div>
         </div>
+        <div class="converters__container">
+            <button class="switc__btn">Measurement Converter</button>
+            <button class="switc__btn">Currency Converter</button>
+        </div>
+        <div class="unit_calc__container">
+            <div class="unit_inputs__container">
+                <div class="input_container first__unit">
+                    <input type="text" name="first__unit" id="first__unit" class="unit__input">
+                    <label id="first__unit__lbl" for="first__unit"></label>
+                </div>
+                <p>=</p>
+                <div class="input_container second__unit">
+                    <input type="text" name="second__unit" id="second__unit" class="unit__input">
+                    <label id="second__unit__lbl" for="second__unit"></label>
+                </div>
+            </div>
+            
+            <div class="unit__calc__values">
+                
+                <div class="unit__section" id="length__section">
+                    <h2 class="unit__heading">Length</h2>
+                    <button class="btn conv__btn">mm</button>
+                    <button class="btn conv__btn">cm</button>
+                    <button class="btn conv__btn">m</button>
+                    <button class="btn conv__btn">km</button>
+                    <button class="btn conv__btn">in</button>
+                    <button class="btn conv__btn">ft</button>
+                    <button class="btn conv__btn">yd</button>
+                    <button class="btn conv__btn">mi</button>
+                </div>
+                <div class="unit__section" id="volume__section">
+                    <h2 class="unit__heading">Volume</h2>
+                    <button class="btn conv__btn">ml</button>
+                    <button class="btn conv__btn">l</button>
+                    <button class="btn conv__btn">cm<sup>3</sup></button>
+                    <button class="btn conv__btn">m<sup>3</sup></button>
+                    <button class="btn conv__btn">tsp</button>
+                    <button class="btn conv__btn">tbsp</button>
+                    <button class="btn conv__btn">cup</button>
+                    <button class="btn conv__btn">pt</button>
+                    <button class="btn conv__btn">fl oz</button>
+                    <button class="btn conv__btn">gal</button>
+                    <button class="btn conv__btn">pt</button>
+                    <button class="btn conv__btn">qt</button>
+                    <button class="btn conv__btn">gal</button>
+                    <button class="btn conv__btn">cl</button>
+                </div>
+                <div class="unit__section" id="weight__section">
+                    <h2 class="unit__heading">Weight</h2>
+                    <button class="btn conv__btn">mg</button>
+                    <button class="btn conv__btn">g</button>
+                    <button class="btn conv__btn">kg</button>
+                    <button class="btn conv__btn">t</button>
+                    <button class="btn conv__btn">oz</button>
+                    <button class="btn conv__btn">lb</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="main.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/measurments.js"></script>
+    <script src="./js/currency.js"></script>
 </body>
 </html>

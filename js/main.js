@@ -5,8 +5,8 @@ let operator = null;
 let shouldClear = false;
 let btnMore = document.getElementById("more-operations");
 
-function roundTo(num, decimals = 2) {
-    return Math.round(num * 10 ** decimals) / 10 ** decimals;
+function formatResult(num, decimals = 2) {
+  return num.toFixed(decimals);
 }
 
 document.querySelectorAll(".btn__num").forEach((number) => {
@@ -27,7 +27,9 @@ document.querySelector(".btn__dot").addEventListener("click", function() {
         text.value = "";
         shouldClear = false;
     }
-    if (!text.value.includes(".")) {
+    if (text.value =="") {
+      text.value = "0.";
+    } else if (!text.value.includes(".")) {
         text.value += this.textContent;
     }
 });
@@ -77,7 +79,7 @@ document.querySelector(".btn__result").addEventListener("click", function() {
                 result = firstNumber % secondNumber;
                 break;
         }
-        text.value = roundTo(result);
+        text.value = formatResult(result);
         firstNumber = secondNumber = operator = null;
         shouldClear = true;
     }
@@ -215,7 +217,9 @@ function handleDecimal() {
     text.value = "";
     shouldClear = false;
   }
-  if (!text.value.includes(".")) {
+  if (text.value === "") {
+    text.value = "0.";
+  } else if (!text.value.includes(".")) {
     text.value += ".";
   }
 }

@@ -8,7 +8,7 @@
     display: flex;
     height: 100vh;
     width: 100%;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     gap: 5px;
 }
@@ -18,6 +18,7 @@
     gap: 0.3vw;
     align-items: stretch;
     height: 565px;
+    order: 1;
 }
 
 .main__calc {
@@ -53,6 +54,7 @@
     gap: 5px;
     position: relative;
     width: 90px;
+    order: 2;
 }
 
 .btn__more {
@@ -69,4 +71,54 @@
     grid-template-rows: repeat(6, 90px);
     padding: 5px;
     z-index: 10;
+}
+
+.converters__container {
+    width: 300px;
+    order: 0;
+    margin-right: 70px;
+    margin-left: 19%;
+}
+
+.unit_inputs__container > p{
+    text-align: center;
+    
+}
+
+.unit__calc__values {
+    display: flex;
+    gap: 5px;
+}
+
+.unit__section {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(2, 90px);
+    grid-template-rows: 40px repeat(4, 90px);
+}
+
+#volume__section {
+    grid-template-rows: 40px repeat(7, 90px);
+}
+
+#weight__section {
+    grid-template-rows: 40px repeat(3, 90px);
+}
+
+.unit__input {
+    width: 100%;
+}
+
+.input_container {
+    display: flex;
+    gap: 7px;
+}
+
+#second__unit {
+    margin-bottom: 17px;
+}
+
+.unit__heading {
+    grid-column: span 2;
+    text-align: center;
 }
