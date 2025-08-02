@@ -8,8 +8,13 @@
 </head>
 <body>
     <div class="wrapper">
-        <!-- <div class="container">
-            <div class="main__calc">
+        <nav class="switch__container">
+            <button class="switc__btn" id="calc__switch">Calculator</button>
+            <button class="switc__btn" id="unit_conv__switch">Measurement Converter</button>
+            <button class="switc__btn" id="curr_conv__switch">Currency Converter</button>
+        </nav>
+        <section class="main_calc__container">
+            <div class="main__container">
                 <input type="text" name="result" id="result">
 
                 <button class="btn btn__num">1</button>
@@ -34,50 +39,44 @@
 
                 <button class="btn btn__result">=</button>
             </div>
-        </div> -->
-        <div class="more__container">
-            <!-- <button class="btn btn__more">More</button> -->
-            <div id="more-operations">
-                <button class="btn btn__oper" id="btn__perc">%</button>
-                <button class="btn btn__oper" id="btn__sqrt">√</button>
-                <button class="btn btn__oper" id="btn__cbrt">∛</button>
-                <button class="btn btn__oper" id="btn__power">^</button>
-                <button class="btn btn__oper" id="btn__square">x²</button>
-                <button class="btn btn__oper" id="btn__cube">x³</button>
-                <button class="btn btn__oper" id="btn__mod">mod</button>
-                <button class="btn btn__oper" id="btn__exp">exp</button>
-                <button class="btn btn__oper" id="btn__abs">abs</button>
-                <button class="btn btn__oper" id="btn__plusMinus">±</button>
-                <button class="btn btn__oper" id="btn__log">log</button>
-                <button class="btn btn__oper" id="btn__ln">ln</button>
-                <button class="btn btn__oper" id="btn__factorial">!</button>
-                <button class="btn btn__oper" id="btn__sin">sin</button>
-                <button class="btn btn__oper" id="btn__cos">cos</button>
-                <button class="btn btn__oper" id="btn__tan">tan</button>
-                <button class="btn btn__oper" id="btn__asin">asin</button>
-                <button class="btn btn__oper" id="btn__acos">acos</button>
-                <button class="btn btn__oper" id="btn__atan">atan</button>
+            <div class="more__container">
+                <button class="btn btn__more">More</button>
+                <div id="more__operations">
+                    <button class="btn btn__oper" id="btn__perc">%</button>
+                    <button class="btn btn__oper" id="btn__sqrt">√</button>
+                    <button class="btn btn__oper" id="btn__cbrt">∛</button>
+                    <button class="btn btn__oper" id="btn__power">^</button>
+                    <button class="btn btn__oper" id="btn__square">x²</button>
+                    <button class="btn btn__oper" id="btn__cube">x³</button>
+                    <button class="btn btn__oper" id="btn__mod">mod</button>
+                    <button class="btn btn__oper" id="btn__exp">exp</button>
+                    <button class="btn btn__oper" id="btn__abs">abs</button>
+                    <button class="btn btn__oper" id="btn__plusMinus">±</button>
+                    <button class="btn btn__oper" id="btn__log">log</button>
+                    <button class="btn btn__oper" id="btn__ln">ln</button>
+                    <button class="btn btn__oper" id="btn__factorial">!</button>
+                    <button class="btn btn__oper" id="btn__sin">sin</button>
+                    <button class="btn btn__oper" id="btn__cos">cos</button>
+                    <button class="btn btn__oper" id="btn__tan">tan</button>
+                    <button class="btn btn__oper" id="btn__asin">asin</button>
+                    <button class="btn btn__oper" id="btn__acos">acos</button>
+                    <button class="btn btn__oper" id="btn__atan">atan</button>
+                </div>
             </div>
-        </div>
-        <div class="converters__container">
-            <button class="switc__btn">Measurement Converter</button>
-            <button class="switc__btn">Currency Converter</button>
-        </div>
-        <div class="unit_calc__container">
+        </section>
+        <section class="unit_calc__container">
             <div class="unit_inputs__container">
                 <div class="input_container first__unit">
-                    <input type="text" name="first__unit" id="first__unit" class="unit__input">
+                    <input type="text" name="first__unit" id="first__unit" class="unit__input" />
                     <label id="first__unit__lbl" for="first__unit"></label>
                 </div>
                 <p>=</p>
                 <div class="input_container second__unit">
-                    <input type="text" name="second__unit" id="second__unit" class="unit__input">
+                    <input type="text" name="second__unit" id="second__unit" class="unit__input" />
                     <label id="second__unit__lbl" for="second__unit"></label>
                 </div>
             </div>
-            
-            <div class="unit__calc__values">
-                
+            <div class="unit_calc__values">
                 <div class="unit__section" id="length__section">
                     <h2 class="unit__heading">Length</h2>
                     <button class="btn conv__btn">mm</button>
@@ -101,9 +100,7 @@
                     <button class="btn conv__btn">pt</button>
                     <button class="btn conv__btn">fl oz</button>
                     <button class="btn conv__btn">gal</button>
-                    <button class="btn conv__btn">pt</button>
                     <button class="btn conv__btn">qt</button>
-                    <button class="btn conv__btn">gal</button>
                     <button class="btn conv__btn">cl</button>
                 </div>
                 <div class="unit__section" id="weight__section">
@@ -115,11 +112,38 @@
                     <button class="btn conv__btn">oz</button>
                     <button class="btn conv__btn">lb</button>
                 </div>
+                <div class="more__container">
+                    <button class="btn btn__more">More</button>
+                    <div id="more__measurments">
+                        <div class="unit__section" id="area__section">
+                            <h2 class="unit__heading">Area</h2>
+                            <button class="btn conv__btn" id="btn__mm2">mm<sup>2</sup></button>
+                            <button class="btn conv__btn" id="btn__cm2">cm<sup>2</sup></button>
+                            <button class="btn conv__btn" id="btn__m2">m<sup>2</sup></button>
+                            <button class="btn conv__btn" id="btn__km2">km<sup>2</sup></button>
+                            <button class="btn conv__btn" id="btn__are">a</button>
+                            <button class="btn conv__btn" id="btn__ha">ha</button>
+                            <button class="btn conv__btn" id="btn__in2">in<sup>2</sup></button>
+                            <button class="btn conv__btn" id="btn__ft2">ft<sup>2</sup></button>
+                            <button class="btn conv__btn" id="btn__yd2">yd<sup>2</sup></button>
+                            <button class="btn conv__btn" id="btn__acre">Acre</button>
+                        </div>
+                        <div class="unit__section" id="temper__section">
+                            <h2 class="unit__heading" id="temper__heading">Temperature</h2>
+                            <button class="btn btn__oper" id="btn__celsius">°C</button>
+                            <button class="btn btn__oper" id="btn__fahrenheit">°F</button>
+                            <button class="btn btn__oper" id="btn__kelvin">K</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+        <section class="curr_calc__container">
+
+        </section>
     </div>
-    <script src="./js/main.js"></script>
-    <script src="./js/measurments.js"></script>
-    <script src="./js/currency.js"></script>
+  <script src="./js/measurments.js"></script>
+  <script src="./js/currency.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>

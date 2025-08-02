@@ -4,24 +4,45 @@
     box-sizing: border-box;
 }
 
+.active {
+    display: block;
+}
+
+.disabled {
+    display: none;
+}
+
+.wrapper .main_calc__container.disabled,
+.wrapper .unit_calc__container.disabled,
+.wrapper .curr_calc__container.disabled {
+    display: none;
+}
+
+#more__measurments.more__measurments--visible {
+    display: flex;
+}
+#more__operations.more__operations--visible {
+    display: grid;
+}
+
 .wrapper {
     display: flex;
     height: 100vh;
     width: 100%;
-    /* justify-content: center; */
     align-items: center;
     gap: 5px;
 }
 
-.container {
+.main_calc__container {
     display: flex;
+    width: 80%;
     gap: 0.3vw;
     align-items: stretch;
     height: 565px;
     order: 1;
 }
 
-.main__calc {
+.main__container {
     display: grid;
     gap: 5px;
     grid-template-columns: repeat(4, 90px);
@@ -60,10 +81,12 @@
 .btn__more {
     height: 100%;
     width: 60px;
+    flex-shrink: 0; 
 }
 
-#more-operations {
+#more__operations {
     position: absolute;
+    top: 0;
     left: 67%; 
     display: none;
     gap: 5px;
@@ -73,35 +96,84 @@
     z-index: 10;
 }
 
-.converters__container {
+.switch__container {
     width: 300px;
+    flex-shrink: 0;
     order: 0;
     margin-right: 70px;
     margin-left: 19%;
 }
 
-.unit_inputs__container > p{
-    text-align: center;
-    
+.switc__btn {
+    width: 100%;
+    margin: 5px;
+    cursor: pointer;
 }
 
-.unit__calc__values {
+.unit_inputs__container {
+    width: 100%;
+}
+
+.unit_inputs__container > p{
+    text-align: center;
+}
+
+.unit_calc__container {
+    width: auto;
+}
+
+.unit_calc__values {
     display: flex;
     gap: 5px;
 }
 
+.unit_calc__values .btn__more {
+    margin-top: 90px;
+}
+
 .unit__section {
+    display: none;
+    gap: 5px;
+}
+
+#more__measurments {
+    display: none;
+    gap: 5px;
+    margin-top: -50px;
+}
+
+#area__section {
     display: grid;
     gap: 5px;
     grid-template-columns: repeat(2, 90px);
     grid-template-rows: 40px repeat(4, 90px);
 }
 
+#temper__section {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: 40px 90px;
+}
+
 #volume__section {
-    grid-template-rows: 40px repeat(7, 90px);
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(2, 90px);
+    grid-template-rows: 40px repeat(6, 90px);
+}
+
+#length__section {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(2, 90px);
+    grid-template-rows: 40px repeat(4, 90px);
 }
 
 #weight__section {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(2, 90px);
     grid-template-rows: 40px repeat(3, 90px);
 }
 
@@ -121,4 +193,8 @@
 .unit__heading {
     grid-column: span 2;
     text-align: center;
+}
+
+#temper__heading {
+    grid-column: span 3;
 }
