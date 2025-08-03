@@ -72,67 +72,70 @@
                 </div>
                 <p>=</p>
                 <div class="input_container second__unit">
-                    <input type="text" name="second__unit" id="second__unit" class="unit__input" />
+                    <input type="text" name="second__unit" id="second__unit" class="unit__input" readonly/>
                     <label id="second__unit__lbl" for="second__unit"></label>
                 </div>
             </div>
             <div class="unit_calc__values">
                 <div class="unit__section" id="length__section">
                     <h2 class="unit__heading">Length</h2>
-                    <button class="btn conv__btn">mm</button>
-                    <button class="btn conv__btn">cm</button>
-                    <button class="btn conv__btn">m</button>
-                    <button class="btn conv__btn">km</button>
-                    <button class="btn conv__btn">in</button>
-                    <button class="btn conv__btn">ft</button>
-                    <button class="btn conv__btn">yd</button>
-                    <button class="btn conv__btn">mi</button>
+                    <button class="btn conv__btn" data-unit="mm">mm</button>
+                    <button class="btn conv__btn" data-unit="cm">cm</button>
+                    <button class="btn conv__btn" data-unit="m">m</button>
+                    <button class="btn conv__btn" data-unit="km">km</button>
+                    <button class="btn conv__btn" data-unit="in">in</button>
+                    <button class="btn conv__btn" data-unit="ft">ft</button>
+                    <button class="btn conv__btn" data-unit="yd">yd</button>
+                    <button class="btn conv__btn" data-unit="mi">mi</button>
                 </div>
                 <div class="unit__section" id="volume__section">
                     <h2 class="unit__heading">Volume</h2>
-                    <button class="btn conv__btn">ml</button>
-                    <button class="btn conv__btn">l</button>
-                    <button class="btn conv__btn">cm<sup>3</sup></button>
-                    <button class="btn conv__btn">m<sup>3</sup></button>
-                    <button class="btn conv__btn">tsp</button>
-                    <button class="btn conv__btn">tbsp</button>
-                    <button class="btn conv__btn">cup</button>
-                    <button class="btn conv__btn">pt</button>
-                    <button class="btn conv__btn">fl oz</button>
-                    <button class="btn conv__btn">gal</button>
-                    <button class="btn conv__btn">qt</button>
-                    <button class="btn conv__btn">cl</button>
+                    <button class="btn conv__btn" data-unit="ml">ml</button>
+                    <button class="btn conv__btn" data-unit="l">l</button>
+                    <button class="btn conv__btn" data-unit="cm">cm<sup>3</sup></button>
+                    <button class="btn conv__btn" data-unit="m">m<sup>3</sup></button>
+                    <button class="btn conv__btn" data-unit="tsp">tsp</button>
+                    <button class="btn conv__btn" data-unit="tbsp">tbsp</button>
+                    <button class="btn conv__btn" data-unit="cup">cup</button>
+                    <button class="btn conv__btn" data-unit="pt">pt</button>
+                    <button class="btn conv__btn" data-unit="fl-oz">fl oz</button>
+                    <button class="btn conv__btn" data-unit="gal">gal</button>
+                    <button class="btn conv__btn" data-unit="qt">qt</button>
+                    <button class="btn conv__btn" data-unit="cl">cl</button>
                 </div>
                 <div class="unit__section" id="weight__section">
                     <h2 class="unit__heading">Weight</h2>
-                    <button class="btn conv__btn">mg</button>
-                    <button class="btn conv__btn">g</button>
-                    <button class="btn conv__btn">kg</button>
-                    <button class="btn conv__btn">t</button>
-                    <button class="btn conv__btn">oz</button>
-                    <button class="btn conv__btn">lb</button>
+                    <button class="btn conv__btn" data-unit="mg">mg</button>
+                    <button class="btn conv__btn" data-unit="g">g</button>
+                    <button class="btn conv__btn" data-unit="kg">kg</button>
+                    <button class="btn conv__btn" data-unit="t">t</button>
+                    <button class="btn conv__btn" data-unit="oz">oz</button>
+                    <button class="btn conv__btn" data-unit="lb">lb</button>
+                    <button class="btn btn__cancel">C</button>
+                    <button class="btn btn__convert">Convert</button>
+                    <button class="btn btn__reverse"><img src="./img/reverse.png" alt="reverse" width="30px"></button>
                 </div>
                 <div class="more__container">
                     <button class="btn btn__more">More</button>
                     <div id="more__measurments">
                         <div class="unit__section" id="area__section">
                             <h2 class="unit__heading">Area</h2>
-                            <button class="btn conv__btn" id="btn__mm2">mm<sup>2</sup></button>
-                            <button class="btn conv__btn" id="btn__cm2">cm<sup>2</sup></button>
-                            <button class="btn conv__btn" id="btn__m2">m<sup>2</sup></button>
-                            <button class="btn conv__btn" id="btn__km2">km<sup>2</sup></button>
-                            <button class="btn conv__btn" id="btn__are">a</button>
-                            <button class="btn conv__btn" id="btn__ha">ha</button>
-                            <button class="btn conv__btn" id="btn__in2">in<sup>2</sup></button>
-                            <button class="btn conv__btn" id="btn__ft2">ft<sup>2</sup></button>
-                            <button class="btn conv__btn" id="btn__yd2">yd<sup>2</sup></button>
-                            <button class="btn conv__btn" id="btn__acre">Acre</button>
+                            <button class="btn conv__btn" id="btn__mm2" data-unit="mm2">mm<sup>2</sup></button>
+                            <button class="btn conv__btn" id="btn__cm2" data-unit="cm2">cm<sup>2</sup></button>
+                            <button class="btn conv__btn" id="btn__m2" data-unit="m2">m<sup>2</sup></button>
+                            <button class="btn conv__btn" id="btn__km2" data-unit="km2">km<sup>2</sup></button>
+                            <button class="btn conv__btn" id="btn__are" data-unit="a">a</button>
+                            <button class="btn conv__btn" id="btn__ha" data-unit="ha">ha</button>
+                            <button class="btn conv__btn" id="btn__in2" data-unit="in2">in<sup>2</sup></button>
+                            <button class="btn conv__btn" id="btn__ft2" data-unit="ft2">ft<sup>2</sup></button>
+                            <button class="btn conv__btn" id="btn__yd2" data-unit="yd2">yd<sup>2</sup></button>
+                            <button class="btn conv__btn" id="btn__acre" data-unit="Acre">Acre</button>
                         </div>
                         <div class="unit__section" id="temper__section">
-                            <h2 class="unit__heading" id="temper__heading">Temperature</h2>
-                            <button class="btn btn__oper" id="btn__celsius">°C</button>
-                            <button class="btn btn__oper" id="btn__fahrenheit">°F</button>
-                            <button class="btn btn__oper" id="btn__kelvin">K</button>
+                            <h2 class="unit__heading" id="temper__heading" data-unit="Temperature">Temperature</h2>
+                            <button class="btn conv__btn" id="btn__celsius" data-unit="°C">°C</button>
+                            <button class="btn conv__btn" id="btn__fahrenheit" data-unit="°F">°F</button>
+                            <button class="btn conv__btn" id="btn__kelvin" data-unit="K">K</button>
                         </div>
                     </div>
                 </div>

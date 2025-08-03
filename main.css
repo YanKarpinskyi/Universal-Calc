@@ -111,7 +111,7 @@
 }
 
 .unit_inputs__container {
-    width: 100%;
+    width: 572px;
 }
 
 .unit_inputs__container > p{
@@ -174,7 +174,7 @@
     display: grid;
     gap: 5px;
     grid-template-columns: repeat(2, 90px);
-    grid-template-rows: 40px repeat(3, 90px);
+    grid-template-rows: 40px repeat(6, 90px);
 }
 
 .unit__input {
@@ -197,4 +197,9 @@
 
 #temper__heading {
     grid-column: span 3;
+}
+
+.unit__section > .btn__cancel, .btn__convert, .btn__reverse {
+    grid-column: span 2;
+    width: auto;
 }
