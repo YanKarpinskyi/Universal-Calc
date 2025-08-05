@@ -142,7 +142,40 @@
             </div>
         </section>
         <section class="curr_calc__container">
-
+            <div class="unit_inputs__container">
+                <div class="input_container first__unit">
+                    <input type="text" name="first__unit" id="first__curr" class="unit__input" />
+                    <label id="first__curr__lbl" for="first__curr"></label>
+                </div>
+                <p>=</p>
+                <div class="input_container second__unit">
+                    <input type="text" name="second__unit" id="second__curr" class="unit__input" readonly/>
+                    <label id="second__curr__lbl" for="second__curr"></label>
+                </div>
+            </div>
+            <div class="curr_calc__values">
+                <div class="curr__section">
+                    <h2 class="curr__heading">USD</h2>
+                    <button class="btn conv__btn" data-curr="USD">$</button>
+                </div>
+                <div class="curr__section">
+                    <h2 class="curr__heading">EUR</h2>
+                    <button class="btn conv__btn" data-curr="EUR">€</button>
+                </div>
+                <div class="curr__section">
+                    <h2 class="curr__heading">PLN</h2>
+                    <button class="btn conv__btn" data-curr="PLN">zł</button>
+                </div>
+                <div class="curr__section">
+                    <h2 class="curr__heading">UAH</h2>
+                    <button class="btn conv__btn" data-curr="UAH">₴</button>
+                </div>
+            </div>
+            <div class="curr_conv__manage">
+                <button class="btn btn__cancel" id="curr_conv__cancel">C</button>
+                <button class="btn btn__convert" id="curr_conv__convert">Convert</button>
+                <button class="btn btn__reverse" id="curr_conv__reverse"><img src="./img/reverse.png" alt="reverse" width="30px"></button>
+            </div>
         </section>
     </div>
   <script src="./js/measurments.js"></script>

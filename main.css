@@ -203,3 +203,31 @@
     grid-column: span 2;
     width: auto;
 }
+
+.curr_calc__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.curr_calc__values {
+    display: flex;
+    gap: 5px;
+}
+
+.curr__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.curr_conv__manage {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#curr_conv__cancel, #curr_conv__convert, #curr_conv__reverse {
+    width: 180px;
+}
