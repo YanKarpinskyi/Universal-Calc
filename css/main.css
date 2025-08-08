@@ -131,6 +131,7 @@ input {
 
 label {
   font-size: 21pt;
+  font-weight: 600;
 }
 
 #result {
@@ -170,6 +171,10 @@ label {
 
 .main_calc__container .btn__more.active {
   background-color: rgb(150.5, 150.5, 150.5);
+}
+
+.btn__result, .btn__more, .btn__cancel, .btn__dot, .btn__convert {
+  font-weight: 600;
 }
 
 .btn__result {
