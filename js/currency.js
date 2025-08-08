@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const firstInputLbl = document.getElementById("first__curr__lbl");
     const secondInputLbl = document.getElementById("second__curr__lbl");
     const convertBtn = document.getElementById("curr_conv__convert");
-    const currencyButtons = document.querySelectorAll(".curr_calc__container .conv__btn");
+    const currencyButtons = document.querySelectorAll(".curr_conv__container .conv__btn");
     const reverseBtn = document.getElementById("curr_conv__reverse");
     const cancelBtn = document.getElementById("curr_conv__cancel");
 

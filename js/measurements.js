@@ -4,74 +4,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const firstInputLbl = document.getElementById("first__unit__lbl");
     const secondInputLbl = document.getElementById("second__unit__lbl");
 
-    const [main_calc__container, unit_calc__container, curr_calc__container] = [
-        document.querySelector(".main_calc__container"),
-        document.querySelector(".unit_calc__container"),
-        document.querySelector(".curr_calc__container")
-    ];
-
-    const [calc__switch, unit_conv__switch, curr_conv__switch] = [
-        document.getElementById("calc__switch"),
-        document.getElementById("unit_conv__switch"),
-        document.getElementById("curr_conv__switch")
-    ];
-
     const convBtn = document.querySelectorAll(".conv__btn");
     const convertBtn = document.querySelector(".btn__convert");
+   
+    const converterMoreBtn = document.querySelector(".unit_conv__values .btn__more");
+    const moreMeasurements = document.getElementById("more__measurements");
 
     let activeInput = null;
 
     let fromUnit = "";
     let toUnit = "";
 
-    main_calc__container.classList.add("active");
-    main_calc__container.classList.remove("disabled");
-    unit_calc__container.classList.add("disabled");
-    unit_calc__container.classList.remove("active");
-    curr_calc__container.classList.add("disabled");
-    curr_calc__container.classList.remove("active");
-
-    calc__switch.addEventListener("click", () => {
-        main_calc__container.classList.add("active");
-        main_calc__container.classList.remove("disabled");
-        unit_calc__container.classList.add("disabled");
-        unit_calc__container.classList.remove("active");
-        curr_calc__container.classList.add("disabled");
-        curr_calc__container.classList.remove("active");
-    })
-
-    unit_conv__switch.addEventListener("click", () => {
-        unit_calc__container.classList.add("active");
-        unit_calc__container.classList.remove("disabled");
-        main_calc__container.classList.add("disabled");
-        main_calc__container.classList.remove("active");
-        curr_calc__container.classList.add("disabled");
-        curr_calc__container.classList.remove("active");
-    })
-
-    curr_conv__switch.addEventListener("click", () => {
-        curr_calc__container.classList.add("active");
-        curr_calc__container.classList.remove("disabled");
-        unit_calc__container.classList.add("disabled");
-        unit_calc__container.classList.remove("active");
-        main_calc__container.classList.add("disabled");
-        main_calc__container.classList.remove("active");
-    })
-
-    const converterMoreBtn = document.querySelector(".unit_calc__values .btn__more");
     if (converterMoreBtn) {
         converterMoreBtn.addEventListener("click", function () {
-            more__measurments.classList.toggle("more__measurments--visible");
+            moreMeasurements.classList.toggle("more__measurements--visible");
+
+            converterMoreBtn.classList.toggle("active", moreMeasurements.classList.contains("more__measurements--visible"))
         });
     }
-
-    const calcMoreBtn = document.querySelector(".more__container .btn__more");
-    if (calcMoreBtn) {
-        calcMoreBtn.addEventListener("click", function () {
-            more__operations.classList.toggle("more__operations--visible");
-        });
-    }
-
 
     [firstUnitInput, secondUnitInput].forEach(input => {
         input.addEventListener("focus", () => {

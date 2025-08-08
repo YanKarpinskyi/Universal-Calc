@@ -7,12 +7,18 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <img class="design__signs" id="top-left__sign" src="./img/plus.png" alt="top-left__sign" width="130px">
+    <img class="design__signs" id="top-right__sign" src="./img/multiple.png" alt="top-right__sign" width="130px">
+    <img class="design__signs" id="bottom-left__sign" src="./img/minus.png" alt="bottom-left__sign" width="130px">
+    <img class="design__signs" id="bottom-right__sign" src="./img/dividing.png" alt="bottom-right__sign" width="130px">
+    
+    <h1 id="heading">Universal Calc</h1>
+    <nav class="switch__container">
+        <button class="switch__btn" id="calc__switch">Calculator</button>
+        <button class="switch__btn" id="unit_conv__switch">Measurement Converter</button>
+        <button class="switch__btn" id="curr_conv__switch">Currency Converter</button>
+    </nav>
     <div class="wrapper">
-        <nav class="switch__container">
-            <button class="switc__btn" id="calc__switch">Calculator</button>
-            <button class="switc__btn" id="unit_conv__switch">Measurement Converter</button>
-            <button class="switc__btn" id="curr_conv__switch">Currency Converter</button>
-        </nav>
         <section class="main_calc__container">
             <div class="main__container">
                 <input type="text" name="result" id="result">
@@ -64,19 +70,19 @@
                 </div>
             </div>
         </section>
-        <section class="unit_calc__container">
+        <section class="unit_conv__container">
             <div class="unit_inputs__container">
-                <div class="input_container first__unit">
+                <div class="input__container first__unit">
                     <input type="text" name="first__unit" id="first__unit" class="unit__input" />
                     <label id="first__unit__lbl" for="first__unit"></label>
                 </div>
                 <p>=</p>
-                <div class="input_container second__unit">
+                <div class="input__container second__unit">
                     <input type="text" name="second__unit" id="second__unit" class="unit__input" readonly/>
                     <label id="second__unit__lbl" for="second__unit"></label>
                 </div>
             </div>
-            <div class="unit_calc__values">
+            <div class="unit_conv__values">
                 <div class="unit__section" id="length__section">
                     <h2 class="unit__heading">Length</h2>
                     <button class="btn conv__btn" data-unit="mm">mm</button>
@@ -117,7 +123,7 @@
                 </div>
                 <div class="more__container">
                     <button class="btn btn__more">More</button>
-                    <div id="more__measurments">
+                    <div id="more__measurements">
                         <div class="unit__section" id="area__section">
                             <h2 class="unit__heading">Area</h2>
                             <button class="btn conv__btn" id="btn__mm2" data-unit="mm2">mm<sup>2</sup></button>
@@ -141,19 +147,19 @@
                 </div>
             </div>
         </section>
-        <section class="curr_calc__container">
+        <section class="curr_conv__container">
             <div class="unit_inputs__container">
-                <div class="input_container first__unit">
+                <div class="input__container first__unit">
                     <input type="text" name="first__unit" id="first__curr" class="unit__input" />
                     <label id="first__curr__lbl" for="first__curr"></label>
                 </div>
                 <p>=</p>
-                <div class="input_container second__unit">
+                <div class="input__container second__unit">
                     <input type="text" name="second__unit" id="second__curr" class="unit__input" readonly/>
                     <label id="second__curr__lbl" for="second__curr"></label>
                 </div>
             </div>
-            <div class="curr_calc__values">
+            <div class="curr_conv__values">
                 <div class="curr__section">
                     <h2 class="curr__heading">USD</h2>
                     <button class="btn conv__btn" data-curr="USD">$</button>
@@ -178,7 +184,7 @@
             </div>
         </section>
     </div>
-  <script src="./js/measurments.js"></script>
+  <script src="./js/measurements.js"></script>
   <script src="./js/currency.js"></script>
   <script src="./js/main.js"></script>
 </body>
